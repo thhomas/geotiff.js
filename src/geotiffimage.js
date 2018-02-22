@@ -875,7 +875,7 @@ GeoTIFFImage.prototype = {
     var y1 = origin[1];
 
     var x2 = x1 + resolution[0] * this.getWidth();
-    var y2 = y1 + resolution[1] * this.getHeight();
+    var y2 = y1 - resolution[1] * this.getHeight();
 
     return [
       Math.min(x1, x2),
